@@ -25,12 +25,12 @@ For details check my [blog post here](https://medium.com/@BaYinMin/application-s
 
 ## To enable vulnerable code
 
-1. Remove comment from line 12-16
+1. Locate app.py file and remove comment from line 12-16
 2. Comment off line 19-30
 3. Restart server
 
 ## To enable fixed code
 
-1. Remove comment from line 19-30
+1. Locate app.py file and remove comment from line 19-30
 2. Comment off line 12-16
 3. Restart server
