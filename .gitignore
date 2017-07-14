@@ -1,0 +1,16 @@
+
+pip-selfcheck.json
+idea/
+bin/
+include/
+lib/
+Python
+.idea/flask_loc.iml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/workspace.xml
+
+.Python

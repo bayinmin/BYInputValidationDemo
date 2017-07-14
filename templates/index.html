@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+		function validateInput() {
+			username = document.getElementById("username").value
+			idnum = document.getElementById("idnum").value
+
+			var isValid = 1;
+
+			//validate username
+			var isOnlyCharacters = /^[a-zA-Z]+$/.test(username);
+
+			// Blank check
+			if(username.length < 1) {
+				alert("Username should not be blank");
+				return false; 
+			}
+
+			// Character only check
+			if(!isOnlyCharacters) {
+				alert("Username should contain only characters");
+				return false; 
+			}
+
+			// validate that the id number contains only numbers
+			var isNumber =  /^\d+$/.test(idnum);
+			if(!isNumber) {
+				alert("Identification number should only contain numbers & not blank");
+				return false; 
+			}
+
+			document.getElementById("sampleForm").Submit();
+		}
+	</script>
+</head>
+<body>
+	
+{% block content %}
+  <h1>Sample Form</h1>
+  <form action="/welcome" method="post" name="sample_form" id="sampleForm">
+  	  <h3> Validation Rule for Username --> Only characters are allowed in Username</h3>
+	  <p>Username: <input type="text" name="username" id="username"></p>
+	  <h3> Validation Rule for Identification Nubmber --> Only numbers are allowed in Identification Number</h3>
+      <p>Identification Number: <input type="text" name="idnum" id="idnum"></p>
+      <p><input type="submit" value="Submit" onclick="return validateInput()"></p>
+  </form>
+{% endblock %}
+
+</body>
+</html>
+
+
+
+
+
